@@ -12,7 +12,7 @@
  * */
 	define('DBHOST', 'localhost');
 	define('DBUSER', 'root');
-	define('DBPASS', 'xxxxxxxxx');
+	define('DBPASS', 'training');
 	define('DB', 'world');
 		
 

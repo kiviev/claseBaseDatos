@@ -5,7 +5,7 @@
  */
 /** con este require se piden las variables donde están los datos de conexion como HOST,USER,PASS y DB
  * */
-require_once('requires.php');
+require_once('config_app.php');
 
 /**
 * 
@@ -86,6 +86,7 @@ class Db {
         $column=trim($column);
         $operator=trim($operator);
         $value=trim($value);
+        $this->query =$this->no_semicolon($this->query);
         $this->query.= ' AND ' . $column . ' '. $operator .  '"'.$value . '"' ;
 //        echo '<br>'.$this->query.' por AND<br>';
         return $this;
@@ -227,7 +228,7 @@ class Db {
             $conex=$this->conex;
             $resul=$conex->query($this->query);
         }
-//                echo '<br> '.$this->query.'  query a traves de exe';
+ //               echo '<br> '.$this->query.'  query a traves de exe';
                 return $resul;
     }
 

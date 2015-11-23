@@ -6,11 +6,10 @@
      * @param array $col_names, array de strings que tiene como valor por defecto un array vacio, si está vacio los nombres de las columnas serán los nombres de las columnas de la base de datos, si queremos darles nombres mas representativos podemos rellenar este campo (ej['nombre','apellido','email'])
      * @return string $table devuelve el string formado que contiene la tabla
      */
-    function create_table($result, $col_names=[])
+    function create_table($result,$col_names=array())
     {
-      
         $table= '';
-        $rows=[];
+        $rows=array();
         while($row = $result->fetch_assoc()){
             array_push($rows,$row);
         }
@@ -18,9 +17,10 @@
         $table.= '<table>';
         $table.= '<tr>';
 
-        if(count($col_names )!== 0){
-            for($i=0 ;$i< count($col_names) ; $i++){
-                $table.= ' <th>'.$col_names[$i].'</th>';
+        if(count($col_names)!== 0){
+            for($i=0 ;$i < count($col_names) ; $i++){
+
+                $table.= '<th>'.$col_names[$i].'</th>';
             }
         }
           else
@@ -34,6 +34,7 @@
                     }
                     $count++;
                 }
+
                 break;
             }
         }
