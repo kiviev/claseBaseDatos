@@ -8,7 +8,7 @@
      */
     function create_table($result, $col_names=[])
     {
-        echo count($col_names).'<br>';
+      
         $table= '';
         $rows=[];
         while($row = $result->fetch_assoc()){
