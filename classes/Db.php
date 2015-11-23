@@ -1,3 +1,12 @@
+/**
+* @autor Francisco Alba
+* @email kiviev@gmail.com
+* @github https://github.com/kiviev
+* @created Nov-2015
+*
+*/
+
+
 <?php
 /**
  * este requires lo que contiene es varios requires para poder hacer funcionar la clase, en este caso solo las variables que guardan los valores de HOST, USER, PASSWORD, Y DB   por defecto.
